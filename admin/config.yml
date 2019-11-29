@@ -1,0 +1,439 @@
+backend:
+  name: git-gateway
+  branch: master # Branch to update (optional; defaults to master)
+
+media_folder: "assets/img/blogs/uploads"
+public_folder: "assets/img/blogs/uploads"
+
+
+collections:
+  - label: "Pages Settings"
+    name: "pages"
+    files:
+      - label: "About Page"
+        name: "site"
+        file: "_data/site.yml"
+        fields:
+          - label: "about landing page"
+            name: "headerAbout"
+            widget: "object"
+            fields:
+              - {label: "Header Catch Phrase", name: "catch_phrase", widget: "string"}
+              - {label: "Header subtext", name: "subtext", widget: "string"}
+              - {label: "Box One Heading", name: "info_box_1_heading", widget: "string"}
+              - {label: "Box One subtext", name: "info_box_1_subtext", widget: "string"}
+              - {label: "Box Two Heading", name: "info_box_2_heading", widget: "string"}
+              - {label: "Box Two subtext", name: "info_box_2_subtext", widget: "string"}
+              - {label: "Box Three Heading", name: "info_box_3_heading", widget: "string"}
+              - {label: "Box Three subtext", name: "info_box_3_subtext", widget: "string"}
+        # About Me page
+      - label: "About Me Page"
+        name: "aboutme"
+        file: "_data/aboutme.yml"
+        fields:
+          - label: "about Me landing page"
+            name: "headerAboutMe"
+            widget: "object"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Blurb", name: "blurp", widget: "string"}
+              - {label: "my Story", name: "myStory", widget: "markdown"}
+      # Site Config
+      - label: "Site Config"
+        name: "description"
+        file: "_config.yml"
+        fields:
+          - label: "Site Description"
+            name: "description"
+            widget: "string"
+          - label: "Email"
+            name: "email"
+            widget: "string"  
+          - label: "Title"
+            name: "title"
+            widget: "string"  
+
+      # Policy  page
+      - label: "Terms And Policies Page"
+        name: "policy"
+        file: "_data/policy.yml"
+        fields:
+          - label: "Policy landing page"
+            name: "policy"
+            widget: "object"
+            fields:
+              - {label: "Header Heading", name: "policy_h1", widget: "string"}
+              - {label: "Header Paragraph", name: "policy_p1", widget: "string"}
+              - {label: "Section Content", name: "content", widget: "markdown"}
+
+      # Recommendations page
+      - label: "Recommendations Page"
+        name: "rec"
+        file: "_data/rec.yml"
+        fields:
+          - label: "Recommendations landing page"
+            name: "rec"
+            widget: "object"
+            fields:
+              - {label: "Header Heading", name: "header_h1", widget: "string"}
+              - {label: "Header Paragraph", name: "header_p", widget: "string"}
+              - {label: "Second Heading", name: "main_h1", widget: "string"}
+              - {label: "Second Paragraph", name: "main_p", widget: "string"}
+              - {label: "Section Heading", name: "body", widget: "markdown"}
+
+      # Book One page
+      - label: "Book One Page"
+        name: "book"
+        file: "_data/bookone.yml"
+        fields:
+          - label: "book One Landing Page"
+            name: "book"
+            widget: "object"
+            fields:
+              - {label: "Header Heading", name: "header_h1", widget: "string"}
+              - {label: "Header Paragraph", name: "header_p", widget: "string"}
+              - {label: "Second Heading", name: "main_heading", widget: "string"}
+              - {label: "Second Paragraph", name: "main_p", widget: "string"}
+              - {label: "Question One", name: "bookone_q1", widget: "string"}
+              - {label: "Answer One", name: "bookone_a1", widget: "string"}
+              - {label: "Question Two", name: "bookone_q2", widget: "string"}
+              - {label: "Answer Two", name: "bookone_a2", widget: "string"}
+              - {label: "Question Three", name: "bookone_q3", widget: "string"}
+              - {label: "Answer Three", name: "bookone_a3", widget: "string"}
+              - {label: "Question Four", name: "bookone_q4", widget: "string"}
+              - {label: "Answer Four", name: "bookone_a4", widget: "string"}
+              - {label: "Book Link", name: "bookonelink", widget: "string"}
+
+      # Book Two page
+      - label: "Book Two Page"
+        name: "bookt"
+        file: "_data/booktwo.yml"
+        fields:
+          - label: "book Two Landing Page"
+            name: "bookt"
+            widget: "object"
+            fields:
+              - {label: "Header Heading", name: "header_h1", widget: "string"}
+              - {label: "Header Paragraph", name: "header_p", widget: "string"}
+              - {label: "Second Heading", name: "main_heading", widget: "string"}
+              - {label: "Second Paragraph", name: "main_p", widget: "string"}
+              - {label: "Question One", name: "booktwo_q1", widget: "string"}
+              - {label: "Answer One", name: "booktwo_a1", widget: "string"}
+              - {label: "Question Two", name: "booktwo_q2", widget: "string"}
+              - {label: "Answer Two", name: "booktwo_a2", widget: "string"}
+              - {label: "Question Three", name: "booktwo_q3", widget: "string"}
+              - {label: "Answer Three", name: "booktwo_a3", widget: "string"}
+              - {label: "Question Four", name: "booktwo_q4", widget: "string"}
+              - {label: "Answer Four", name: "booktwo_a4", widget: "string"}
+              - {label: "Book Link", name: "booktwolink", widget: "string"}
+              - {label: "Make Visible", name: "visible", widget: "boolean", default: false}
+
+
+      # Book Three page
+      - label: "Book Three Page"
+        name: "bookth"
+        file: "_data/bookthree.yml"
+        fields:
+          - label: "book Three Landing Page"
+            name: "bookth"
+            widget: "object"
+            fields:
+              - {label: "Header Heading", name: "header_h1", widget: "string"}
+              - {label: "Header Paragraph", name: "header_p", widget: "string"}
+              - {label: "Second Heading", name: "main_heading", widget: "string"}
+              - {label: "Second Paragraph", name: "main_p", widget: "string"}
+              - {label: "Question One", name: "bookthree_q1", widget: "string"}
+              - {label: "Answer One", name: "bookthree_a1", widget: "string"}
+              - {label: "Question Two", name: "bookthree_q2", widget: "string"}
+              - {label: "Answer Two", name: "bookthree_a2", widget: "string"}
+              - {label: "Question Three", name: "bookthree_q3", widget: "string"}
+              - {label: "Answer Three", name: "bookthree_a3", widget: "string"}
+              - {label: "Question Four", name: "bookthree_q4", widget: "string"}
+              - {label: "Answer Four", name: "bookthree_a4", widget: "string"}
+              - {label: "Book Link", name: "bookthreelink", widget: "string"}
+              - {label: "Make Visible", name: "visible", widget: "boolean", default: false}
+
+      # Services  page
+      - label: "Services Page"
+        name: "services"
+        file: "_data/services.yml"
+        fields:
+          - label: "Policy landing page"
+            name: "serv"
+            widget: "object"
+            fields:
+              - {label: "Header Heading", name: "header_h1", widget: "string"}
+              - {label: "Header Paragraph", name: "header_p", widget: "string"}
+              - {label: "Second Heading", name: "main_h1", widget: "string"}
+              - {label: "Second Paragraph", name: "main_p", widget: "string"}
+              - {label: "Box One small Upper Text", name: "box_1_small_span", widget: "string"}
+              - {label: "Box One Heading", name: "box_1_h1", widget: "string"}
+              - {label: "Box One Paragraph", name: "box_1_p", widget: "string"}
+              - {label: "Box Two small Upper Text", name: "box_2_small_span", widget: "string"}
+              - {label: "Box Two Heading", name: "box_2_h1", widget: "string"}
+              - {label: "Box Two Paragraph", name: "box_2_p", widget: "string"}
+              - {label: "Box Three small Upper Text", name: "box_3_small_span", widget: "string"}
+              - {label: "Box Three Heading", name: "box_3_h1", widget: "string"}
+              - {label: "Box Three Paragraph", name: "box_3_p", widget: "string"}
+              - {label: "Box Four small Upper Text", name: "box_4_small_span", widget: "string"}
+              - {label: "Box Four Heading", name: "box_4_h1", widget: "string"}
+              - {label: "Box Four Paragraph", name: "box_4_p", widget: "string"}
+              - {label: "Third Heading", name: "sub_heading", widget: "string"}
+              - {label: "Box One Title", name: "sub_h1_1", widget: "string"}
+              - {label: "Box One Subtext", name: "sub_p_1", widget: "string"}
+              - {label: "Box Two Title", name: "sub_h1_2", widget: "string"}
+              - {label: "Box Two Subtext", name: "sub_p_2", widget: "string"}              
+              - {label: "Box Three Title", name: "sub_h1_3", widget: "string"}
+              - {label: "Box Three Subtext", name: "sub_p_3", widget: "string"}              
+              - {label: "Box Four Title", name: "sub_h1_4", widget: "string"}
+              - {label: "Box Four Subtext", name: "sub_p_4", widget: "string"}
+
+      # Footer
+      - label: "Footer Content"
+        name: "footer"
+        file: "_data/footer.yml"
+        fields:
+          - label: "footer content"
+            name: "footer"
+            widget: "object"
+            fields:
+              - {label: "Phone Number", name: "p_1", widget: "string"}
+              - {label: "Email", name: "p_2", widget: "string"}
+              - {label: "Youtube Hyperlink", name: "link_yt", widget: "string"}
+              - {label: "Instagram Hyperlink", name: "link_ins", widget: "string"}
+              - {label: "Facebook Hyperlink", name: "link_fb", widget: "string"}
+              - {label: "Pinterest Hyperlink", name: "link_pin", widget: "string"}
+              - {label: "Disclaimer", name: "disclaimer", widget: "string"}
+              - {label: "Copyrights", name: "copyrights", widget: "string"}
+      # navbar
+      - label: "Navbar Content"
+        name: "navbar"
+        file: "_data/navbar.yml"
+        fields:
+          - label: "footer content"
+            name: "links"
+            widget: "object"
+            fields:
+              - {label: "Link One", name: "link1", widget: "string"}
+              - {label: "Link Two", name: "link2", widget: "string"}
+              - {label: "Sub Link Two-1", name: "link2_1", widget: "string"}
+              - {label: "Sub Link Two-2", name: "link2_2", widget: "string"}
+              - {label: "Sub Link Two-3", name: "link2_3", widget: "string"}
+              - {label: "Link Three", name: "link3", widget: "string"}
+              - {label: "Link Four", name: "link4", widget: "string"}
+              - {label: "Sub Link Four-1", name: "link4_1", widget: "string"}
+              - {label: "Sub Link Four-2", name: "link4_2", widget: "string"}
+              - {label: "Sub Link Four-3", name: "link4_3", widget: "string"}
+              - {label: "Link Five", name: "link5", widget: "string"}
+              - {label: "Link Six", name: "link6", widget: "string"}
+              - {label: "Link Seven", name: "link7", widget: "string"}
+              - {label: "Sub Link Seven-1", name: "link7_1", widget: "string"}
+              - {label: "Sub Link Seven-2", name: "link7_2", widget: "string"}
+
+        # FAQ Page
+      - label: "FAQ Page"
+        name: "faq"
+        file: "_data/faq.yml"
+        fields:
+          - label: "faq Landing page"
+            name: "faq"
+            widget: "object"
+            fields:
+              - {label: "FAQ Header Heading", name: "heading_h1", widget: "string"}
+              - {label: "FAQ Header Paragraph", name: "header_p", widget: "string"}
+              - {label: "Main Heading", name: "main_h1", widget: "string"}
+              - {label: "Main Paragraph", name: "main_p", widget: "string"}
+          
+          - label: "FAQ One"
+            name: "faq_one"
+            widget: "object"
+            fields:
+              - {label: "FAQ One Heading", name: "faq_1_h1", widget: "string"}
+              - {label: "Question 1", name: "faq_1_q1", widget: "string"}
+              - {label: "Answer 1", name: "faq_1_a1", widget: "string"}
+              - {label: "Question 2", name: "faq_1_q2", widget: "string"}
+              - {label: "Answer 2", name: "faq_1_a2", widget: "string"}
+              - {label: "Question 3", name: "faq_1_q3", widget: "string"}
+              - {label: "Answer 3", name: "faq_1_a3", widget: "string"}
+              - {label: "Question 4", name: "faq_1_q4", widget: "string"}
+              - {label: "Answer 4", name: "faq_1_a4", widget: "string"}
+              - {label: "Question 5", name: "faq_1_q5", widget: "string"}
+              - {label: "Answer 5", name: "faq_1_a5", widget: "string"}
+
+          - label: "FAQ Two"
+            name: "faq_two"
+            widget: "object"
+            fields:
+              - {label: "FAQ Two Heading", name: "faq_2_h1", widget: "string"}
+              - {label: "Question 1", name: "faq_2_q1", widget: "string"}
+              - {label: "Answer 1", name: "faq_2_a1", widget: "string"}
+              - {label: "Question 2", name: "faq_2_q2", widget: "string"}
+              - {label: "Answer 2", name: "faq_2_a2", widget: "string"}
+              - {label: "Question 3", name: "faq_2_q3", widget: "string"}
+              - {label: "Answer 3", name: "faq_2_a3", widget: "string"}
+              - {label: "Question 4", name: "faq_2_q4", widget: "string"}
+              - {label: "Answer 4", name: "faq_2_a4", widget: "string"}
+
+          - label: "FAQ Three"
+            name: "faq_three"
+            widget: "object"
+            fields:
+              - {label: "FAQ Three Heading", name: "faq_3_h1", widget: "string"}
+              - {label: "Question 1", name: "faq_3_q1", widget: "string"}
+              - {label: "Answer 1", name: "faq_3_a1", widget: "string"}
+              - {label: "Question 2", name: "faq_3_q2", widget: "string"}
+              - {label: "Answer 2", name: "faq_3_a2", widget: "string"}
+      
+        # Contact Page
+      - label: "Contact Page"
+        name: "contactus"
+        file: "_data/contact.yml"
+        fields:
+          - label: "Contact Landing page"
+            name: "contactus"
+            widget: "object"
+            fields:
+              - {label: "Header Heading", name: "header_h1", widget: "string"}
+              - {label: "Header Paragraph", name: "header_p", widget: "string"}
+              - {label: "Second Heading", name: "main_h1", widget: "string"}
+          
+          - label: "Select List"
+            widget: "list"
+            name: list
+            allow_add: true
+            fields:   
+              - {label: List Options, name: item, widget: string}
+
+        # Home page              
+      - label: "Home Page"
+        name: "index"
+        file: "_data/index.yml"
+        widget: 'object'
+        fields:
+          - label: "Header Section"
+            name: "home"
+            widget: "object"
+            fields:
+              - {label: "First Catch Phrase", name: "header_catch_phrase_one", widget: "string"}
+              - {label: "Second Catch Phrase", name: "header_catch_phrase_two", widget: "string"}
+              - {label: "Blurb", name: "header_paragraph", widget: "string"}
+              - {label: "Video Hyperlink", name: "header_button_link", widget: "string"}
+          - label: "About Section"
+            name: "about"
+            widget: "object"
+            fields:
+              - {label: "Small Title", name: "about_title_one", widget: "string"}
+              - {label: "Heading Title", name: "about_heading", widget: "string"}
+              - {label: "about paragraph", name: "about_paragraph", widget: "string"}
+              - {label: "Bullet Point One", name: "about_point_1", widget: "string"}
+              - {label: "Bullet Paragraph One", name: "about_point_1_p", widget: "string"}
+              - {label: "Bullet Point Two", name: "about_point_2", widget: "string"}
+              - {label: "about Paragraph Two", name: "about_point_2_p", widget: "string"}
+              - {label: "Bullet Point Two", name: "about_point_3", widget: "string"}
+              - {label: "about Paragraph Two", name: "about_point_3_p", widget: "string"}
+              - {label: "Bullet Point Four", name: "about_point_4", widget: "string"}
+              - {label: "about Paragraph Four", name: "about_point_4_p", widget: "string"}
+              - {label: "Boxes Heading", name: "about_heading_box", widget: "string"}
+              - {label: "First Box Title", name: "about_box_one_title", widget: "string"}
+              - {label: "First Box paragraph", name: "about_box_one_p", widget: "string"}
+              - {label: "Second Box Title", name: "about_box_two_title", widget: "string"}
+              - {label: "Second Box paragraph", name: "about_box_two_p", widget: "string"}
+              - {label: "Third Box Title", name: "about_box_three_title", widget: "string"}
+              - {label: "Third Box paragraph", name: "about_box_three_p", widget: "string"}
+              - {label: "Fourth Box Title", name: "about_box_four_title", widget: "string"}
+              - {label: "Fourth Box paragraph", name: "about_box_four_p", widget: "string"}
+              - {label: "Fifth Box Title", name: "about_box_five_title", widget: "string"}
+              - {label: "Fifth Box paragraph", name: "about_box_five_p", widget: "string"}
+          - label: "Showcase Section"
+            name: "showcase"
+            widget: "object"
+            fields:
+              - {label: "Showcase Title", name: "showcase_heading", widget: "string"}
+              - {label: "Showcase Title", name: "showcase_p", widget: "string"}
+              - {label: "Item One Title", name: "item_1_title", widget: "string"}
+              - {label: "Item One paragraph", name: "item_1_p", widget: "string"}
+              - {label: "Item two Title", name: "item_2_title", widget: "string"}
+              - {label: "Item two paragraph", name: "item_2_p", widget: "string"}
+              - {label: "Item three Title", name: "item_3_title", widget: "string"}
+              - {label: "Item three paragraph", name: "item_3_p", widget: "string"}
+              - {label: "Item four Title", name: "item_4_title", widget: "string"}
+              - {label: "Item four paragraph", name: "item_4_p", widget: "string"}
+              - {label: "Item five Title", name: "item_5_title", widget: "string"}
+              - {label: "Item five paragraph", name: "item_5_p", widget: "string"}
+              - {label: "Item six Title", name: "item_6_title", widget: "string"}
+              - {label: "Item six paragraph", name: "item_6_p", widget: "string"}
+              - {label: "Item Seven Title", name: "item_7_title", widget: "string"}
+              - {label: "Item Seven paragraph", name: "item_7_p", widget: "string"}
+              - {label: "Item Eight Title", name: "item_8_title", widget: "string"}
+              - {label: "Item Eight paragraph", name: "item_8_p", widget: "string"}
+              - {label: "Item Nine Title", name: "item_9_title", widget: "string"}
+              - {label: "Item Nine paragraph", name: "item_9_p", widget: "string"}
+
+          - label: "Statistics Section"
+            name: "stats"
+            widget: "object"
+            fields:
+              - {label: "Percentage", name: "percent", widget: "string"}
+              - {label: "Under Percentage", name: "stat_p", widget: "string"}
+              - {label: "People Number", name: "people", widget: "string"}
+              - {label: "Under People Number", name: "people_txt", widget: "string"}
+              - {label: "Small heading", name: "smallHeading", widget: "string"}
+              - {label: "Phrase", name: "phrase", widget: "string"}
+              - {label: "button Text", name: "btn", widget: "string"}
+
+          - label: "Testimonials"
+            name: "clients"
+            widget: "object"
+            fields:
+              - {label: "Main Heading", name: "c_heading", widget: "string"}
+              - {label: "Subtext", name: "c_para", widget: "string"}
+              - {label: "Client One Heading", name: "c_1_heading", widget: "string"}
+              - {label: "Client One Paragraph", name: "c_1_paragraph", widget: "string"}
+              - {label: "Client One Date", name: "c_1_date", widget: "string"}
+              - {label: "Client One Avatar", name: "c_1_img", widget: "image", default: '/uploads' }
+              - {label: "Client two Heading", name: "c_2_heading", widget: "string"}
+              - {label: "Client two Paragraph", name: "c_2_paragraph", widget: "string"}
+              - {label: "Client two Date", name: "c_2_date", widget: "string"}
+              - {label: "Client two Avatar", name: "c_2_img", widget: "image", default: '/uploads' }
+              - {label: "Client three Heading", name: "c_3_heading", widget: "string"}
+              - {label: "Client three Paragraph", name: "c_3_paragraph", widget: "string"}
+              - {label: "Client three Date", name: "c_3_date", widget: "string"}
+              - {label: "Client three Avatar", name: "c_3_img", widget: "image", default: '/uploads' }
+              - {label: "Client four Heading", name: "c_4_heading", widget: "string"}
+              - {label: "Client four Paragraph", name: "c_4_paragraph", widget: "string"}
+              - {label: "Client four Date", name: "c_4_date", widget: "string"}
+              - {label: "Client four Avatar", name: "c_4_img", widget: "image", default: '/uploads' }
+
+  #Blog Post Collections 
+  - name: "post" # Used in routes, e.g., /admin/collections/blog
+    label: "post" # Used in the UI
+    folder: "_posts" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    format: frontmatter
+    extension: html
+    fields: # The fields for each document, usually in front matter
+      - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "category (must be lowercase And use dashes between Words e.g: business-marketing)", name: "categories", widget: "string"}
+      - {label: "Sub Category (must be lowercase And use dashes between Words e.g: ecommerce)", name: "tags", widget: "string"}
+      - {label: "author", name: "author", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Comments", name: "comments", widget: "boolean", default: true}      
+      - {label: "Featured Image", name: "featImg", widget: "image", default: '/uploads'}
+      - {label: "Body", name: "body", widget: "markdown"}
+
+  #Blog Post Collections 
+  - name: "subcategories" # Used in routes, e.g., /admin/collections/blog
+    label: "Blog Categories" # Used in the UI
+    folder: "_posts/subcategories" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    format: frontmatter
+    extension: html
+    fields: # The fields for each document, usually in front matter
+      - {label: "Layout", name: "layout", widget: "hidden", default: "subcategories"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "category (must be lowercase And use dashes between Words e.g: making-money)", name: "categories", widget: "string"}
+      - {label: "sub-categories (must be lowercase And use space between Words e.g: ecommerce online dropshipping)", name: "tags", widget: "string"}
+

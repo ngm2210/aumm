@@ -1,0 +1,24 @@
+---
+layout: default
+---
+<header class="header-about">
+	{% include navbar.html %}
+		<div class="holder">
+			<div class="picture">
+				<img src="assets/img/about/me/06.jpeg" alt="Nickolas G muscat">
+			</div>
+			<div class="blurp">
+				 <span class="title-text" style="display: none;" >{{site.data.aboutme.headerAboutMe.title}}</span>
+				<h1>Hello, <span class="typed-text-about underline"></span></h1>
+				<p> {{site.data.aboutme.headerAboutMe.blurp}} </p>
+			</div>
+		</div>
+</header>
+<section class="story">
+	<div class="container">
+		<div class="story-holder">
+			{{site.data.aboutme.headerAboutMe.myStory}}
+		</div>
+	</div>
+</section>
+{% include footer.html %}

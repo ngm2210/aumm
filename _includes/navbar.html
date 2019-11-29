@@ -1,0 +1,95 @@
+<div class="navigation-menu">
+    <button class="btn-toggle" id="menu-toggle">
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+  </button>
+  <div class="logo">
+    <h2>Logo</h2>
+  </div>
+</div>
+  <nav>
+  	<ul class="ul-nav">
+      <li class="logo-mark">
+            <div class="mark"><h2> <a href="/"> Aussie <br> Money Man </a></h2></div>    
+      </li>
+      <li class="links-li">
+         <ul class="sub-ul-container">
+         <li><a href="/"> {{site.data.navbar.links.link1}} </a></li>
+         <li class="sub-li main-li">
+            <a href="#">{{site.data.navbar.links.link2}}</a>
+             <div class="link-holder">
+                <a href="/about-us">{{site.data.navbar.links.link2_1}} </a>
+                <a href="/about">{{site.data.navbar.links.link2_2}}</a>
+                <a href="/faq">{{site.data.navbar.links.link2_3}}</a>
+             </div>
+         </li>
+         <li class="sub-li main-li">
+            <a href="#">{{site.data.navbar.links.link3}}</a>
+            <div class="link-holder">
+                  <ul>
+                    <li class="sub-li sub-li-a">
+                      <a href="#">International</a>
+                        <div class="sub-link-holder">
+                         {% for post in site.posts %}
+                            {% if post.url contains '/international/' %}
+                               <a  class="sub-link" href=" {{post.url}} "> {{post.title | join: ' ' }} </a>
+                            {% endif %} 
+                        {% endfor %}
+                        </div>
+                    </li>
+                    <li class="sub-li sub-li-a">
+                      <a href="#">Aussie</a>
+                        <div class="sub-link-holder aussie-link">
+                         {% for post in site.posts %}
+                            {% if post.url contains '/aussie/' %}
+                               <a  class="sub-link" href=" {{post.url}} "> {{post.title | join:' ' }} </a>
+                            {% endif %} 
+                        {% endfor %}
+                        </div>
+                    </li>                    
+                  </ul>
+             </div>
+         </li>
+
+         <li class="sub-li main-li">
+            <a href="#">{{site.data.navbar.links.link4}}</a>
+             <div class="link-holder">
+                <a href="/subscribe">{{site.data.navbar.links.link4_1}}</a>
+                {% if site.data.booktwo.bookt.visible %}
+                  <a href="/book-two">{{site.data.navbar.links.link4_2}}</a>
+                {% endif %}
+                {% if site.data.bookthree.bookth.visible %}
+                  <a href="/book-three">{{site.data.navbar.links.link4_3}}</a>
+                {% endif %}                
+             </div>
+         </li>
+         <li><a href="/services">{{site.data.navbar.links.link5}}</a></li>     
+         <li><a href="/recommendations">{{site.data.navbar.links.link6}}</a></li>
+         <li class="sub-li main-li">
+            <a href="#">{{site.data.navbar.links.link7}}</a>
+             <div class="link-holder">
+                <a href="/policy">{{site.data.navbar.links.link7_1}}</a>
+                <a href="/contact">{{site.data.navbar.links.link7_2}}</a>
+             </div>
+         </li>
+         <li>
+
+   <!-- /search -->
+
+    <div class="search">
+      <button id="btn-search-close" class="btn btn--search-close" aria-label="Close search form"><svg class="icon icon--cross"><use xlink:href="#icon-cross"></use></svg></button>
+
+      <form class="search__form" action="get" data-search-form id="site_search">
+        <input class="search__input" id="q" name="q" data-search-input type="search" placeholder="Find..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" />
+        <span class="search__info">Hit enter to search or ESC to close</span>
+      </form>
+
+    </div>
+          <button id="btn-search" class="btn btn--search"><svg class="icon icon--search"><use xlink:href="#icon-search"></use></svg></button>
+    <!-- /search -->
+         </li>
+       </ul>
+      </li>
+  	</ul>	
+</nav>

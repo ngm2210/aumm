@@ -1,0 +1,189 @@
+.about-nav{
+	.ul-nav{
+		background:#FFF;
+		*{
+			color:#000 !important;
+		}
+	}
+}
+
+.aboutus-header{
+	height: 530px;
+	background: url('../img/about-us/01.png') no-repeat;
+	background-size:cover;
+	background-attachment: fixed;
+	height: 530px;
+	&:before {
+	    display: block;
+	    content: '';
+	    position: absolute;
+	    top: 0;
+	    bottom: 0;
+	    left: 0;
+	    right: 0;
+		background: url('../img/about-us/01.png') no-repeat;
+	    background-size: cover;
+	    background-attachment: fixed;
+	    z-index: -1;
+	    filter: grayscale(100%);
+		}	
+	.overlay{
+	}
+	.aboutus-holder{
+		display: flex;
+		margin-top:5%;
+		justify-content: center;
+	}
+	.aboutus-text{
+		display: flex;
+		flex-direction: column;
+		flex-basis: 57%;
+		h1{
+		    font-size: 3.5em;
+		    text-align: center;
+		    margin:0 auto;
+		}
+		p{
+		    font-size: 1.5em;
+		    margin:50px auto;
+		    text-align: center;
+			a{color:skyblue;}
+		}
+	}
+}
+
+
+.about-us-info{
+	text-align: center;
+	margin-top:0;
+	.our-mission{
+	    display: flex;
+	    margin-top: 80px;
+	    justify-content: space-around;		
+		.pic{
+			img{
+				width:400px;
+				height:400px;
+			}
+		}
+		.paragraph{
+			 text-align: left;
+			 box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.15);
+			 flex-basis: 40%;
+			 margin-top:4%;
+			 padding:30px;
+			 border-radius:14px;
+			p{
+			    font-size: 1.2em;
+			    line-height: 1.8;
+				color:#696565;
+			}
+		}
+	}
+	.our-mission:nth-child(3){
+		flex-direction: column;
+	}
+	.our-mission:last-child{
+		.pic{
+			img{
+				width: 746px;
+			    transform: scale(.7);
+			    height: 400px;
+			}
+		}
+	}
+}
+
+
+
+@media screen and (max-width: 990px){
+	.illustration{
+		display: none;
+	}
+	.blurp{
+		flex-basis: 100% !important;
+		align-items: center;
+	}
+	.our-mission{
+		flex-direction: column;
+		.pic{
+			margin-top:10%;
+		}
+	}
+	.our-mission:nth-child(2){
+		.pic{
+			order:1;
+		}
+	}
+
+	.our-mission:nth-child(3){
+		.pic{
+			img{
+				transform:scale(1);
+				width:100% !important;
+			}
+		}
+	}
+
+}
+
+
+@media screen and (max-width: 760px){
+	.header-about-us{
+		padding-top: 15%
+	}
+	.blurp{
+		padding-left:20px;
+		padding-right:20px;
+		h1{
+		    font-size: 2.4em !important;
+		}
+		p{
+		    color: #000000ad !important;
+		    width: 280px !important;
+		    font-size: 1.6em;
+		}
+	}
+}
+@media screen and (max-width: 500px){
+	.pic{
+		img{
+			height:258px !important;
+		}
+	}
+}
+@media screen and (max-width: 450px){
+	.our-mission{
+		img{
+			width:100% !important;
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

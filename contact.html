@@ -1,0 +1,50 @@
+---
+layout: default
+---
+<header class="contact-header">
+	<div class="about-nav">
+		{% include navbar.html %}
+	</div>
+	<div class="container">
+		<div class="faq-holder contact-holder">
+			<div class="faq-text contact-text">
+				<h1> {{ site.data.contact.contactus.header_h1 }} </h1>
+				<p>{{ site.data.contact.contactus.header_p }} </p>
+			</div>
+		</div>
+	</div>
+ <div class="overlay"></div>
+</header>
+
+<section class="contact-form">
+	<div class="container">
+		<form  action="https://getsimpleform.com/messages?form_api_token=731f7d991bae591cf101f92b2138473b" method="post">
+		    <p>{{ site.data.contact.contactus.main_h1 }}</p>
+		     <input type='hidden' name='redirect_to' value='{{site.url}}/thanks' />
+		    <div class="login">
+				<label>
+				    <input type="text" required="required" name="Name" />
+				    <span>Name</span>
+				<label>
+				<label>
+				    <input type="text" required="required" name="Email" />
+				    <span>Email</span>					
+				</label>
+				    <select name="subject" id="subject">
+				    	{% for list in site.data.contact.list %}
+					    	<option value=" {{ list.item }} ">
+								 {{ list.item }} 
+					    	</option>
+				    	{% endfor %}
+					</select>
+			    <label class="msg" >
+			    <input type="text" required="required" class="area" name="content" />
+			     <span>Message</span>
+			    </label>
+		    </div>
+		    <button class="btn" type="submit">Send Message</button>
+		</form>
+	</div>
+</section>
+
+{% include footer.html %}
